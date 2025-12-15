@@ -1903,7 +1903,7 @@ header.head-scrolling .nav-logo img {
     font-size: 20px;
   }
   .search-grid{
-    grid-template-columns: repeat(2);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
