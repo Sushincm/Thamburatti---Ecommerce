@@ -5,7 +5,7 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #921111 #ffffff;
+  scrollbar-color: #0a163e #ffffff;
 }
 
 /* Chrome, Edge, and Safari */
@@ -18,7 +18,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #921111;
+  background-color: #bd9e5c;
   border-radius: 0px;
   border: 3px solid #ffffff;
 }
@@ -27,7 +27,8 @@
   --dm-font: "DM Sans", sans-serif;
   --bricol-font: "Bricolage Grotesque", sans-serif;
   --anim: 0.5s all;
-  --primary-color: #7a0f0e;
+  --primary-color: #bd9e5c;
+  --secondary-color:#0a163e;
 }
 
 html {
@@ -545,7 +546,7 @@ header.head-scrolling .nav-logo img {
 }
 
 .banner-content a:hover {
-  background-color: #111;
+  background-color: var(--secondary-color);
 }
 
 /* collections */
@@ -582,7 +583,7 @@ header.head-scrolling .nav-logo img {
 }
 
 .bossify-category-link:hover .bossify-title {
-  color: #c0392b;
+  color: var(--primary-color);
 }
 
 .collections-show {
@@ -732,12 +733,13 @@ header.head-scrolling .nav-logo img {
 }
 
 .features-strip {
-  background-color: #7a0f0e17;
+  background-color: var(--primary-color);
 }
 
 .feature-item {
   max-width: 260px;
   margin-inline: auto;
+  color: #fff;
 }
 
 .feature-icon {
@@ -1460,7 +1462,7 @@ header.head-scrolling .nav-logo img {
   height: 40px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(3, 2, 39, 0.58);
   color: #fff;
   display: flex;
   align-items: center;
