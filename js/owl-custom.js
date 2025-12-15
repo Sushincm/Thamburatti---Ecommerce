@@ -2,7 +2,7 @@ $(document).ready(function () {
   const $bannerCarousel = $(".banner-carousel");
   const $progressInner = $(".banner-progress-inner");
 
-  const slideTime = 7000; // slower overall: 7 seconds per slide
+  const slideTime = 3000; // slower overall: 7 seconds per slide
 
   let progressWidth = 0;
   let progressTimer;
@@ -31,7 +31,7 @@ $(document).ready(function () {
     loop: true,
     autoplay: false,
     dots: false,
-    animateOut: 'fadeOut',
+    animateOut: "fadeOut",
     nav: true,
     navText: [
       '<i class="ri-arrow-left-s-line"></i>',
@@ -39,9 +39,9 @@ $(document).ready(function () {
     ],
 
     // slower slide animation:
-    smartSpeed: 900, 
-    autoplaySpeed: 900, 
-    dragEndSpeed: 900, 
+    smartSpeed: 1200,
+    autoplaySpeed: 1200,
+    dragEndSpeed: 1200,
 
     onInitialized: startProgress,
     onTranslated: startProgress,
@@ -92,7 +92,6 @@ const spotlightSwiper = new Swiper(".spotlight-swiper", {
     disableOnInteraction: false,
   },
 
-
   direction: "vertical",
   pagination: {
     el: ".spotlight-pagination",
@@ -127,8 +126,8 @@ $(function () {
     autoplay: true,
     responsive: {
       0: { items: 2 },
-      576: { items: 2 }, 
-      992: { items: 4 }, 
+      576: { items: 2 },
+      992: { items: 4 },
     },
   });
 
@@ -195,27 +194,26 @@ $(".video-testimonial-carousel").owlCarousel({
   dots: true,
   nav: false,
   responsive: {
-    0: { items: 2 }, 
+    0: { items: 2 },
     600: { items: 3 },
-    992: { items: 4 }, 
+    992: { items: 4 },
   },
 });
 
 // Modal + YouTube handling
 const vtModalEl = document.getElementById("vtModal");
 const vtVideoFrame = document.getElementById("vtVideoFrame");
-const vtModal = new bootstrap.Modal(vtModalEl); 
+const vtModal = new bootstrap.Modal(vtModalEl);
 
 document
   .querySelectorAll(".video-testimonial-carousel .vt-card")
   .forEach((card) => {
     card.addEventListener("click", () => {
-      const baseUrl = card.dataset.video; 
+      const baseUrl = card.dataset.video;
       vtVideoFrame.src = baseUrl + "?autoplay=1";
       vtModal.show();
     });
   });
-
 
 vtModalEl.addEventListener("hide.bs.modal", () => {
   vtVideoFrame.src = "";
@@ -225,4 +223,34 @@ vtModalEl.addEventListener("hidden.bs.modal", () => {
   document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
   document.body.classList.remove("modal-open");
   document.body.style.removeProperty("padding-right");
+});
+
+$(document).ready(function () {
+  $(".insta-carousel").owlCarousel({
+    loop: true,
+    margin: 16,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    nav: true, // nav buttons exist but will be hidden on desktop via CSS
+    dots: false,
+    navText: [
+      '<i class="ri-arrow-left-s-line"></i>',
+      '<i class="ri-arrow-right-s-line"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 4,
+      },
+      1200: {
+        items: 6,
+      },
+    },
+  });
 });
