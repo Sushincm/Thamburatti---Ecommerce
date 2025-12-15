@@ -31,6 +31,7 @@ $(document).ready(function () {
     loop: true,
     autoplay: false,
     dots: false,
+    animateOut: 'fadeOut',
     nav: true,
     navText: [
       '<i class="ri-arrow-left-s-line"></i>',
