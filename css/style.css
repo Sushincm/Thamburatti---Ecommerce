@@ -206,7 +206,6 @@ section {
   background: var(--primary-color);
 }
 
-
 .sb-topcat__title {
   font-family: var(--bricol-font);
   color: var(--secondary-color);
@@ -448,7 +447,6 @@ section {
   padding: 80px 0;
 }
 
-/* Left column */
 .sb-elevate__content {
   max-width: 560px;
 }
@@ -481,7 +479,6 @@ section {
   margin-right: 10px;
 }
 
-/* Right column visuals */
 .sb-elevate__visual {
   position: relative;
   display: flex;
@@ -493,7 +490,6 @@ section {
   position: relative;
   z-index: 1;
 }
-
 .sb-elevate__mask-img {
   display: block;
   max-width: 380px;
@@ -512,41 +508,50 @@ section {
   object-fit: contain;
   object-position: bottom center;
 }
-.elavate-right-leaf{
+.elavate-right-leaf {
   position: absolute;
   right: -40px;
   top: 0;
   width: 300px;
 }
-/* Responsive */
-@media (max-width: 991.98px) {
-  .sb-elevate {
-    padding: 56px 0;
-  }
+/* Feature CTA */
+.sb-feature-cta__card {
+  border-radius: 20px;
+  border: 2px solid var(--secondary-color);
+  padding: 35px 15px;
+  text-decoration: none;
+  background-color: #ffffff;
+  transition: var(--anim);
+  justify-content: center;
+  gap: 14px;
+}
 
-  .sb-elevate__content {
-    margin-bottom: 28px;
-  }
+.sb-feature-cta__icon {
+  font-size: 1.5rem;
+  color: #000000;
+}
 
-  .sb-elevate__visual {
-    max-width: 420px;
-    margin-inline: auto;
+.sb-feature-cta__text {
+  font-family: var(--bricol-font);
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* Hover: soft primary background */
+.sb-feature-cta__card:hover {
+  background-color: rgba(189, 158, 92, 0.06);
+  border-color: var(--primary-color);
+}
+
+/* Stack cards < 600px */
+@media (max-width: 599.98px) {
+  .sb-feature-cta__card {
+    width: 100%;
   }
 }
 
-@media (max-width: 575.98px) {
-  .sb-elevate__title {
-    font-size: 1.8rem;
-  }
-
-  .sb-elevate__mask-img {
-    max-width: 320px;
-  }
-
-  .sb-elevate__photo {
-    max-width: 220px;
-  }
-}
 
 /* Responsive */
 @media (max-width: 991.98px) {
@@ -583,9 +588,18 @@ section {
   .sb-arrivals__paper-wrap {
     padding-left: 6%;
   }
-}
+  .sb-elevate {
+    padding: 56px 0;
+  }
 
-@media (max-width: 991.98px) {
+  .sb-elevate__content {
+    margin-bottom: 28px;
+  }
+
+  .sb-elevate__visual {
+    max-width: 420px;
+    margin-inline: auto;
+  }
   .sb-topcat__image {
     height: 320px;
   }
@@ -640,5 +654,16 @@ section {
 
   .sb-arrivals__paper {
     padding: 18px 22px;
+  }
+  .sb-elevate__title {
+    font-size: 1.8rem;
+  }
+
+  .sb-elevate__mask-img {
+    max-width: 320px;
+  }
+
+  .sb-elevate__photo {
+    max-width: 220px;
   }
 }
