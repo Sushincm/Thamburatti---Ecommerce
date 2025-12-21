@@ -50,4 +50,31 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   });
+
+  //  Consulting section
+  $(document).ready(function () {
+    const $consultCarousel = $(".sb-consulting-carousel");
+
+    $consultCarousel.owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: false,
+      dots: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        576: { items: 2 },
+        992: { items: 4 },
+      },
+    });
+
+    $(".sb-consulting__nav--next").on("click", function () {
+      $consultCarousel.trigger("next.owl.carousel");
+    });
+    $(".sb-consulting__nav--prev").on("click", function () {
+      $consultCarousel.trigger("prev.owl.carousel");
+    });
+  });
 });
