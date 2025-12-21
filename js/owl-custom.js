@@ -90,10 +90,26 @@ document.addEventListener("DOMContentLoaded", function () {
       autoplayTimeout: 4500,
       autoplayHoverPause: true,
       responsive: {
-        0: { items: 1 }, 
-        576: { items: 2 }, 
-        768: { items: 3 }, 
-        1200: { items: 5 }, 
+        0: { items: 1 },
+        576: { items: 2 },
+        768: { items: 3 },
+        1200: { items: 5 },
+      },
+    });
+  });
+
+  $(document).ready(function () {
+    $(".sb-reviews-carousel").owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 6000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
       },
     });
   });
