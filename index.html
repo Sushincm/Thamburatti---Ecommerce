@@ -8,6 +8,13 @@
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
+    <!-- Icon Fonts CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
@@ -18,8 +25,183 @@
   <body>
     <!-- Smooth scroll wrapper for Lenis -->
     <div class="lenis-wrapper">
-      <h3>hi sdfksdfh</h3>
+      <div class="message-header w-100 py-2 text-center">
+        <p class="mb-0 d-flex align-items-center justify-content-center gap-2">
+          <i class="ph ph-t-shirt"></i>
+          Designer Quality styles
+        </p>
+      </div>
+      <header class="sb-header border-bottom">
+        <div
+          class="container sb-header__container d-flex align-items-center justify-content-between py-3"
+        >
+          <!-- Left: category nav -->
+          <nav class="sb-header__nav d-none d-md-block">
+            <ul
+              class="sb-header-nav list-unstyled d-flex align-items-center gap-4 mb-0"
+            >
+              <li class="sb-header-nav__item">
+                <a href="#bridal" class="sb-header-nav__link">Bridal</a>
+              </li>
+              <li class="sb-header-nav__item">
+                <a href="#dress" class="sb-header-nav__link">Dress</a>
+              </li>
+              <li class="sb-header-nav__item">
+                <a href="#sarees" class="sb-header-nav__link">Sarees</a>
+              </li>
+              <li class="sb-header-nav__item">
+                <a href="#summer" class="sb-header-nav__link">Summer Clothes</a>
+              </li>
+              <li class="sb-header-nav__item">
+                <a href="#lehenga" class="sb-header-nav__link">Lehenga Choli</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- logo -->
+          <div
+            class="sb-header__brand d-flex align-items-center justify-content-center"
+          >
+            <a
+              href="#home"
+              class="sb-header-brand d-inline-flex align-items-center text-decoration-none"
+            >
+              <span
+                class="sb-header-brand__logo me-2 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="images/thamburatti-logo.png"
+                  alt="Boutique Logo"
+                  class="sb-header-brand__logo-img"
+                />
+              </span>
+            </a>
+          </div>
+
+          <!-- Right: search + icons -->
+          <div class="sb-header__actions d-flex align-items-center gap-3">
+            <!-- Search pill -->
+            <form
+              class="sb-search d-none d-md-flex align-items-center"
+              role="search"
+            >
+              <div class="sb-search__input-wrap flex-grow-1">
+                <input
+                  type="search"
+                  class="form-control sb-search__input border-0 shadow-0"
+                  placeholder="Fashion Search"
+                  aria-label="Fashion Search"
+                />
+              </div>
+              <button
+                type="submit"
+                class="sb-search__button d-inline-flex align-items-center justify-content-center"
+              >
+                <i class="ph ph-magnifying-glass"></i>
+              </button>
+            </form>
+
+            <!-- Icons -->
+            <button
+              class="btn sb-header-icon-btn d-inline-flex align-items-center justify-content-center"
+            >
+              <!-- cart icon placeholder -->
+              <i class="ph ph-shopping-cart"></i>
+            </button>
+            <button
+              class="btn sb-header-icon-btn d-inline-flex align-items-center justify-content-center"
+            >
+              <!-- user icon placeholder -->
+              <i class="ph ph-user"></i>
+            </button>
+          </div>
+        </div>
+        <div class="sb-main-nav-wrapper">
+          <nav class="sb-main-nav d-flex justify-content-center">
+            <ul
+              class="sb-main-nav__list list-unstyled d-flex align-items-center gap-4 mb-0"
+            >
+              <li class="sb-main-nav__item">
+                <a
+                  href="#home"
+                  class="sb-main-nav__link sb-main-nav__link--active"
+                  >Home</a
+                >
+              </li>
+              <li class="sb-main-nav__item">
+                <a href="#" class="sb-main-nav__link">About Us</a>
+              </li>
+              <li class="sb-main-nav__item">
+                <a href="#" class="sb-main-nav__link">Shop All</a>
+              </li>
+              <li class="sb-main-nav__item">
+                <a href="#" class="sb-main-nav__link">Consulting</a>
+              </li>
+              <li class="sb-main-nav__item">
+                <a href="#" class="sb-main-nav__link">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="sb-banner">
+        <div class="owl-carousel sb-banner-carousel">
+          <!-- Slide 1 -->
+          <div class="sb-banner__item position-relative">
+            <img
+              src="https://images.pexels.com/photos/6311653/pexels-photo-6311653.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Gold tone festive outfit"
+              class="sb-banner__image"
+            />
+            <div
+              class="sb-banner__content d-flex flex-column justify-content-center"
+            >
+              <h2 class="sb-banner__title">
+                Celebrate every occasion in gold‑kissed silhouettes
+              </h2>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="sb-banner__item position-relative">
+            <img
+              src="https://images.pexels.com/photos/1749452/pexels-photo-1749452.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Lehenga with deep jewel tones"
+              class="sb-banner__image"
+            />
+            <div
+              class="sb-banner__content d-flex flex-column justify-content-center"
+            >
+              <h2 class="sb-banner__title">
+                Curated lehengas in rich jewel hues for modern brides
+              </h2>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="sb-banner__item position-relative">
+            <img
+              src="https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Elegant saree in deep blue and gold"
+              class="sb-banner__image"
+            />
+            <div
+              class="sb-banner__content d-flex flex-column justify-content-center"
+            >
+              <h2 class="sb-banner__title">
+                Timeless sarees in deep blue and luminous gold accents
+              </h2>
+            </div>
+          </div>  
+        </div>
+      </section>
     </div>
+
+    <section style="height: 100vh"></section>
+    <section style="height: 100vh"></section>
+    <section style="height: 100vh"></section>
+    <section style="height: 100vh"></section>
 
     <!-- jQuery (required for Owl Carousel 2) -->
     <script src="js/jquery.min.js"></script>
@@ -29,6 +211,7 @@
 
     <!-- Owl Carousel JS -->
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owl-custom.js"></script>
 
     <!-- Lenis JS -->
     <script src="js/lenis.min.js"></script>
