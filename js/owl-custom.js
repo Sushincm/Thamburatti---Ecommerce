@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nav: true,
       dots: true,
       autoplay: true,
-      autoplayTimeout: 4500,
+      autoplayTimeout: 1500,
       autoplayHoverPause: true,
       responsive: {
         0: { items: 1 },
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
       margin: 24,
       nav: false,
       dots: true,
-      autoplay: false,
-      autoplayTimeout: 5000,
+      autoplay: true,
+      autoplayTimeout: 1500,
       autoplayHoverPause: true,
       responsive: {
         0: { items: 1 },
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nav: false,
       dots: true,
       autoplay: true,
-      autoplayTimeout: 4500,
+      autoplayTimeout: 1500,
       autoplayHoverPause: true,
       responsive: {
         0: { items: 1 },
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nav: false,
       dots: true,
       autoplay: true,
-      autoplayTimeout: 6000,
+      autoplayTimeout: 1500,
       autoplayHoverPause: true,
       responsive: {
         0: { items: 1 },
