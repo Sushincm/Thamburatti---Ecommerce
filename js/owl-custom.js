@@ -24,10 +24,29 @@ document.addEventListener("DOMContentLoaded", function () {
       autoplayTimeout: 1500,
       autoplayHoverPause: true,
       responsive: {
-        0: { items: 2 }, 
+        0: { items: 2 },
         550: { items: 2 },
         768: { items: 3 },
         992: { items: 4 },
+      },
+    });
+  });
+
+  // New arrivals carousel
+  $(document).ready(function () {
+    $(".sb-arrivals-carousel").owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 4500,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        576: { items: 2 },
+        992: { items: 3 },
+        1200: { items: 4 },
       },
     });
   });
