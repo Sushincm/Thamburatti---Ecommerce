@@ -1395,7 +1395,7 @@ section {
 }
 
 .bf-signup__btn--primary {
-  background: var(--primary-color);
+  background: var(--secondary-color);
   color: #fff;
   transition: var(--anim);
 }
@@ -1525,6 +1525,12 @@ section {
   }
   .bossify-auth-box--right {
     padding-left: 10px;
+  }
+  .bf-signup__card {
+    padding: 22px 16px;
+  }
+  .bf-signup__title {
+    font-size: 22px;
   }
 }
 

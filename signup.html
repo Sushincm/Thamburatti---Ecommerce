@@ -23,6 +23,11 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/thin/style.css"
+    />
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
@@ -238,48 +243,120 @@
         </div>
       </div>
 
-      <section class="bossify-auth">
+      <section class="bf-signup">
         <div class="container">
-          <div class="row g-lg-5 align-items-start">
-            <div class="col-lg-6 order-1 order-lg-1 auth-border-right">
-              <div class="bossify-auth-box">
-                <h2 class="bossify-auth-title">Sign In To Your Account</h2>
-                <p class="bossify-auth-subtitle">Welcome back!</p>
-                <p class="bossify-auth-text">
-                  If you already have an account with us, please sign in.
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9">
+              <div class="bf-signup__card">
+                <h2 class="bf-signup__title">Create Your Account</h2>
+                <p class="bf-signup__intro">
+                  Register to checkout faster, track orders, and save
+                  favourites.
                 </p>
 
-                <form class="bossify-auth-form" action="#" method="post">
-                  <div class="bossify-field">
-                    <label class="bossify-label" for="bossifyEmail"
-                      >E-mail/Mobile *</label
+                <form class="bf-signup__form" action="#" method="post">
+                  <!-- Email -->
+                  <div class="bf-signup__field">
+                    <label class="bf-signup__label" for="bfSuEmail"
+                      >E-mail *</label
                     >
                     <input
-                      id="bossifyEmail"
-                      type="text"
-                      class="bossify-input"
-                      placeholder="Enter your email or mobile"
+                      id="bfSuEmail"
+                      type="email"
+                      class="bf-signup__input"
                       required
                     />
                   </div>
 
-                  <div class="bossify-field">
-                    <label class="bossify-label" for="bossifyPassword"
+                  <!-- Phone + Send OTP -->
+                  <div class="row g-3">
+                    <div class="col-md-7">
+                      <div class="bf-signup__field">
+                        <label class="bf-signup__label" for="bfSuPhone"
+                          >Phone number *</label
+                        >
+
+                        <div class="bf-signup__phone">
+                          <span class="bf-signup__phoneCode">+91</span>
+                          <input
+                            id="bfSuPhone"
+                            type="tel"
+                            class="bf-signup__input bf-signup__input--phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-5 d-flex align-items-end">
+                      <div class="bf-signup__field w-100">
+                        <button
+                          type="button"
+                          class="bf-signup__btn bf-signup__btn--outline w-100 bf-signup__btn--otp"
+                        >
+                          Send OTP
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- OTP -->
+                  <div class="bf-signup__field">
+                    <label class="bf-signup__label" for="bfSuOtp">OTP *</label>
+                    <input
+                      id="bfSuOtp"
+                      type="text"
+                      class="bf-signup__input"
+                      required
+                    />
+                  </div>
+
+                  <!-- Password -->
+                  <div class="bf-signup__field">
+                    <label class="bf-signup__label" for="bfSuPass"
                       >Password *</label
                     >
 
-                    <div class="bossify-password">
+                    <div class="bf-signup__password">
                       <input
-                        id="bossifyPassword"
+                        id="bfSuPass"
                         type="password"
-                        class="bossify-input bossify-input--password"
-                        placeholder="Enter your password"
+                        class="bf-signup__input bf-signup__input--password"
                         required
                       />
                       <button
-                        class="bossify-eye"
+                        class="bf-signup__eye"
                         type="button"
-                        id="bossifyTogglePassword"
+                        id="bfTogglePass1"
+                        aria-label="Toggle password"
+                      >
+                        <i class="ph-thin ph-eye"></i>
+                      </button>
+                    </div>
+
+                    <small class="bf-signup__help">
+                      Password should be at least 9 characters and include
+                      upper/lowercase, a number, and a special character.
+                    </small>
+                  </div>
+
+                  <!-- Confirm Password -->
+                  <div class="bf-signup__field">
+                    <label class="bf-signup__label" for="bfSuPass2"
+                      >Confirm Password *</label
+                    >
+
+                    <div class="bf-signup__password">
+                      <input
+                        id="bfSuPass2"
+                        type="password"
+                        class="bf-signup__input bf-signup__input--password"
+                        required
+                      />
+                      <button
+                        class="bf-signup__eye"
+                        type="button"
+                        id="bfTogglePass2"
                         aria-label="Toggle password"
                       >
                         <i class="ph-thin ph-eye"></i>
@@ -287,36 +364,83 @@
                     </div>
                   </div>
 
-                  <div class="bossify-auth-row">
-                    <label class="bossify-remember">
-                      <input type="checkbox" />
-                      <span>Remember Me</span>
-                    </label>
-
-                    <a class="bossify-link" href="#">Forgot password?</a>
+                  <!-- Title -->
+                  <div class="bf-signup__field">
+                    <label class="bf-signup__label d-block">Title *</label>
+                    <div class="bf-signup__radios">
+                      <label class="bf-signup__radio">
+                        <input
+                          type="radio"
+                          name="bf_title"
+                          value="mr"
+                          required
+                        />
+                        <span>Mr.</span>
+                      </label>
+                      <label class="bf-signup__radio">
+                        <input
+                          type="radio"
+                          name="bf_title"
+                          value="ms"
+                          required
+                        />
+                        <span>Ms.</span>
+                      </label>
+                    </div>
                   </div>
 
+                  <!-- Names -->
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="bf-signup__field">
+                        <label class="bf-signup__label" for="bfSuFirst"
+                          >First name *</label
+                        >
+                        <input
+                          id="bfSuFirst"
+                          type="text"
+                          class="bf-signup__input"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="bf-signup__field">
+                        <label class="bf-signup__label" for="bfSuLast"
+                          >Last name *</label
+                        >
+                        <input
+                          id="bfSuLast"
+                          type="text"
+                          class="bf-signup__input"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Referral -->
+                  <div class="bf-signup__field">
+                    <label class="bf-signup__label" for="bfSuRef"
+                      >Referral code</label
+                    >
+                    <input id="bfSuRef" type="text" class="bf-signup__input" />
+                  </div>
+
+                  <!-- (blue marked block removed) -->
+
                   <button
-                    class="bossify-btn bossify-btn-primary w-100"
+                    class="bf-signup__btn bf-signup__btn--primary w-100 mt-2"
                     type="submit"
                   >
-                    Sign In
+                    Register
                   </button>
+
+                  <p class="bf-signup__foot mt-3 mb-0">
+                    Already have an account?
+                    <a class="bf-signup__link" href="login.html">Sign in</a>
+                  </p>
                 </form>
-              </div>
-            </div>
-            <div class="col-lg-6 order-2 order-lg-2">
-              <div class="bossify-auth-box bossify-auth-box--right">
-                <h2 class="bossify-auth-title">
-                  DON’T HAVE A THAMBURATTI ACCOUNT?
-                </h2>
-                <p class="bossify-auth-text">
-                  Create an account to save favourites, track orders, and
-                  checkout faster.
-                </p>
-                <a class="bossify-btn bossify-btn-outline w-100" href="#">
-                  Register to Thamburatti
-                </a>
               </div>
             </div>
           </div>
@@ -452,6 +576,7 @@
 
     <!-- GSAP-based section animation -->
     <script src="js/lenisInstallation.js"></script>
+
     <!-- Password show/hide -->
     <script src="js/passowordShow.js"></script>
   </body>
