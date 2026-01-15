@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
-
 :root {
   --dm-font: "DM Sans", sans-serif;
   --bricol-font: "Bricolage Grotesque", sans-serif;
@@ -144,7 +141,7 @@ section {
   padding: 10px 34px;
   border-radius: 999px;
   font-family: var(--dm-font);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   text-decoration: none;
@@ -504,7 +501,7 @@ section {
 .sb-feature-cta__card {
   border-radius: 20px;
   border: 2px solid var(--secondary-color);
-  padding: 35px 15px;
+  padding: 1.5em 1.5em;
   text-decoration: none;
   background-color: #ffffff;
   transition: var(--anim);
@@ -513,13 +510,13 @@ section {
 }
 
 .sb-feature-cta__icon {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #000000;
 }
 
 .sb-feature-cta__text {
   font-family: var(--bricol-font);
-  font-size: 1.3rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #000000;
@@ -915,7 +912,6 @@ section {
 }
 /* Service */
 
-
 /* flex container */
 .sb-service__list {
   display: flex;
@@ -959,7 +955,7 @@ section {
 }
 
 .sb-footer {
-  background-image: url("../images/footer-bg.jpg");
+  background-image: url("../images/footer-bg.webp");
   background-size: cover;
   background-position: center;
   color: var(--primary-color);
@@ -1103,8 +1099,347 @@ section {
   color: #f6e4f2;
 }
 
+/* Mobile Menu */
+.sb-mobile-menu {
+  background-color: #ffffff;
+}
+
+.sb-mobile-menu__title {
+  font-family: var(--bricol-font);
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sb-mobile-menu__link {
+  font-family: var(--dm-font);
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--anim);
+}
+
+.sb-mobile-menu__link:hover {
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+/* Login page */
+.bossify-auth-box {
+  padding: 32px;
+  min-height: 100%;
+}
+
+.auth-border-right {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bossify-auth-box--right {
+  border-right: 0;
+  padding-left: 48px;
+}
+
+.bossify-auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--bossify-text);
+  margin-bottom: 10px;
+}
+
+.bossify-auth-subtitle {
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: var(--bossify-text);
+}
+
+.bossify-auth-text {
+  margin: 0 0 22px;
+  color: var(--bossify-muted);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* form */
+.bossify-field {
+  margin-bottom: 18px;
+}
+
+.bossify-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--bossify-text);
+}
+
+.bossify-input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #00000092;
+  padding: 0 14px;
+  outline: none;
+  font-size: 14px;
+  background: #fff !important;
+}
+
+.bossify-input:focus {
+  border-color: var(--primary-color);
+}
+
+.bossify-password {
+  position: relative;
+}
+
+.bossify-input--password {
+  padding-right: 46px;
+}
+
+.bossify-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.bossify-auth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 12px 0 22px;
+}
+
+.bossify-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--bossify-text);
+}
+
+.bossify-link {
+  font-size: 14px;
+  color: var(--bossify-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.bossify-link:hover {
+  color: var(--primary-color);
+}
+
+.bossify-btn {
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 1px solid transparent;
+}
+
+.bossify-btn-primary {
+  background: var(--secondary-color);
+  color: #fff;
+  transition: var(--anim);
+}
+
+.bossify-btn-primary:hover {
+  filter: brightness(0.95);
+  background-color: #000;
+}
+
+.bossify-btn-outline {
+  background: #fff;
+  border: 1px solid #00000092;
+  color: #000;
+}
+
+.bossify-btn-outline:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.bf-signup__card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 34px;
+  background: #fff;
+}
+
+.bf-signup__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 8px;
+}
+
+.bf-signup__intro {
+  margin: 0 0 22px;
+  color: rgba(0, 0, 0, 0.62);
+  line-height: 1.6;
+}
+
+.bf-signup__field {
+  margin-bottom: 16px;
+}
+
+.bf-signup__label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.bf-signup__input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  padding: 0 14px;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+}
+
+.bf-signup__input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(184, 148, 74, 0.18);
+}
+
+.bf-signup__phone {
+  position: relative;
+}
+
+.bf-signup__phoneCode {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.bf-signup__input--phone {
+  padding-left: 52px;
+}
+
+.bf-signup__password {
+  position: relative;
+}
+
+.bf-signup__input--password {
+  padding-right: 46px;
+}
+
+.bf-signup__eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.bf-signup__help {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.bf-signup__radios {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bf-signup__radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #111;
+  cursor: pointer;
+}
+
+.bf-signup__btn {
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  border: 1px solid transparent;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.bf-signup__btn--primary {
+  background: var(--primary-color);
+  color: #fff;
+  transition: var(--anim);
+}
+
+.bf-signup__btn--primary:hover {
+  background-color: #000;
+}
+
+.bf-signup__btn--outline {
+  background: #fff;
+  color: #111;
+  border-color: rgba(0, 0, 0, 0.28);
+}
+
+.bf-signup__btn--outline:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.bf-signup__btn--otp {
+  height: 48px;
+  letter-spacing: 0.12em;
+}
+
+.bf-signup__foot {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+.bf-signup__link {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.bf-signup__link:hover {
+  color: var(--primary-color);
+}
+
 /* Responsive */
 @media (max-width: 991.98px) {
+  .sb-elevate__photo {
+    height: auto;
+  }
   .sb-header__container {
     justify-content: center;
     gap: 1rem;
@@ -1167,6 +1502,30 @@ section {
   .sb-discover__image {
     height: 240px;
   }
+  .sb-arrivals__leaf {
+    display: none;
+  }
+  .elavate-right-leaf {
+    opacity: 0.3;
+  }
+  .sb-feature-cta__card {
+    padding: 0.8em 1.2em;
+  }
+  .sb-feature-cta__text,
+  .sb-feature-cta__icon,
+  .sb-service__text {
+    font-size: 0.8rem;
+  }
+  .bossify-auth-box {
+    border-right: 0;
+    padding: 22px 10px;
+  }
+  .bossify-auth-title {
+    font-size: 22px;
+  }
+  .bossify-auth-box--right {
+    padding-left: 10px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1195,7 +1554,7 @@ section {
   .sb-footer__form {
     max-width: 100%;
   }
-    .sb-service__list {
+  .sb-service__list {
     justify-content: center;
   }
 
@@ -1236,9 +1595,6 @@ section {
     width: 90px;
     height: 90px;
   }
-  .sb-arrivals {
-    padding: 56px 0 72px;
-  }
 
   .sb-arrivals__image {
     height: 320px;
@@ -1260,7 +1616,8 @@ section {
   }
 
   .sb-elevate__photo {
-    max-width: 220px;
+    max-width: 100%;
+    height: auto;
   }
   .sb-consulting {
     padding: 56px 0 72px;
@@ -1279,5 +1636,8 @@ section {
 
   .sb-discover__image {
     height: 220px;
+  }
+  .arrival-container {
+    margin-left: 0;
   }
 }

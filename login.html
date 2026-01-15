@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thamburaatti</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Icon Fonts CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Smooth scroll wrapper for Lenis -->
+    <div class="lenis-wrapper">
+      <div class="message-header w-100 py-2 text-center">
+        <p class="mb-0 d-flex align-items-center justify-content-center gap-2">
+          <i class="ph ph-t-shirt"></i>
+          Designer Quality styles
+        </p>
+      </div>
+      <header class="sb-header border-bottom">
+        <div
+          class="container sb-header__container d-flex align-items-center justify-content-between py-3"
+        >
+          <!-- Hamburger Button (Mobile) -->
+          <button
+            class="btn sb-header-icon-btn d-lg-none me-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+          >
+            <i class="ph ph-list" style="font-size: 1.5rem"></i>
+          </button>
+
+          <!-- Left: category nav -->
+          <nav class="sb-header__nav d-none d-lg-block">
+            <ul
+              class="sb-header-nav list-unstyled d-flex align-items-center gap-4 mb-0"
+            >
+              <li class="sb-header-nav__item">
+                <a href="#bridal" class="sb-header-nav__link">Bridal</a>
+              </li>
+              <li class="sb-header-nav__item">
+                <a href="#dress" class="sb-header-nav__link">Dress</a>
+              </li>
+              <li class="sb-header-nav__item">
+                <a href="#sarees" class="sb-header-nav__link">Sarees</a>
+              </li>
+              <li class="sb-header-nav__item">
+                <a href="#summer" class="sb-header-nav__link">Summer Clothes</a>
+              </li>
+              <li class="sb-header-nav__item">
+                <a href="#lehenga" class="sb-header-nav__link">Lehenga Choli</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- logo -->
+          <div
+            class="sb-header__brand d-flex align-items-center justify-content-center"
+          >
+            <a
+              href="#home"
+              class="sb-header-brand d-inline-flex align-items-center text-decoration-none"
+            >
+              <span
+                class="sb-header-brand__logo me-2 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="images/thamburatti-logo.png"
+                  alt="Boutique Logo"
+                  class="sb-header-brand__logo-img"
+                />
+              </span>
+            </a>
+          </div>
+
+          <!-- Right: search + icons -->
+          <div class="sb-header__actions d-flex align-items-center gap-3">
+            <!-- Search pill -->
+            <form
+              class="sb-search d-none d-lg-flex align-items-center"
+              role="search"
+            >
+              <div class="sb-search__input-wrap flex-grow-1">
+                <input
+                  type="search"
+                  class="form-control sb-search__input border-0 shadow-0"
+                  placeholder="Fashion Search"
+                  aria-label="Fashion Search"
+                />
+              </div>
+              <button
+                type="submit"
+                class="sb-search__button d-inline-flex align-items-center justify-content-center"
+              >
+                <i class="ph ph-magnifying-glass"></i>
+              </button>
+            </form>
+
+            <!-- Icons -->
+            <button
+              class="btn sb-header-icon-btn d-inline-flex align-items-center justify-content-center"
+            >
+              <!-- cart icon placeholder -->
+              <i class="ph ph-shopping-cart"></i>
+            </button>
+            <button
+              class="btn sb-header-icon-btn d-inline-flex align-items-center justify-content-center"
+            >
+              <!-- user icon placeholder -->
+              <i class="ph ph-user"></i>
+            </button>
+          </div>
+        </div>
+        <div class="sb-main-nav-wrapper d-none d-lg-block">
+          <nav class="sb-main-nav d-flex justify-content-center">
+            <ul
+              class="sb-main-nav__list list-unstyled d-flex align-items-center gap-4 mb-0"
+            >
+              <li class="sb-main-nav__item">
+                <a
+                  href="#home"
+                  class="sb-main-nav__link sb-main-nav__link--active"
+                  >Home</a
+                >
+              </li>
+              <li class="sb-main-nav__item">
+                <a href="#" class="sb-main-nav__link">About Us</a>
+              </li>
+              <li class="sb-main-nav__item">
+                <a href="#" class="sb-main-nav__link">Shop All</a>
+              </li>
+              <li class="sb-main-nav__item">
+                <a href="#" class="sb-main-nav__link">Consulting</a>
+              </li>
+              <li class="sb-main-nav__item">
+                <a href="#" class="sb-main-nav__link">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Mobile Menu Offcanvas -->
+      <div
+        class="offcanvas offcanvas-start sb-mobile-menu"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+      >
+        <div class="offcanvas-header border-bottom">
+          <h5
+            class="offcanvas-title sb-mobile-menu__title"
+            id="mobileMenuLabel"
+          >
+            Menu
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- Mobile Search -->
+          <form class="d-flex mb-4" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-dark" type="submit">
+              <i class="ph ph-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <!-- Main Navigation Links -->
+          <h6
+            class="text-uppercase text-muted mb-3"
+            style="font-size: 0.8rem; letter-spacing: 1px"
+          >
+            Navigation
+          </h6>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+            <li><a href="#home" class="sb-mobile-menu__link">Home</a></li>
+            <li><a href="#" class="sb-mobile-menu__link">About Us</a></li>
+            <li><a href="#" class="sb-mobile-menu__link">Shop All</a></li>
+            <li><a href="#" class="sb-mobile-menu__link">Consulting</a></li>
+            <li><a href="#" class="sb-mobile-menu__link">Contact Us</a></li>
+          </ul>
+
+          <hr class="my-4" />
+
+          <!-- Category Links -->
+          <h6
+            class="text-uppercase text-muted mb-3"
+            style="font-size: 0.8rem; letter-spacing: 1px"
+          >
+            Categories
+          </h6>
+          <ul class="list-unstyled d-flex flex-column gap-3">
+            <li><a href="#bridal" class="sb-mobile-menu__link">Bridal</a></li>
+            <li><a href="#dress" class="sb-mobile-menu__link">Dress</a></li>
+            <li><a href="#sarees" class="sb-mobile-menu__link">Sarees</a></li>
+            <li>
+              <a href="#summer" class="sb-mobile-menu__link">Summer Clothes</a>
+            </li>
+            <li>
+              <a href="#lehenga" class="sb-mobile-menu__link">Lehenga Choli</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="bossify-auth">
+        <div class="container">
+          <div class="row g-lg-5 align-items-start">
+            <div class="col-lg-6 order-1 order-lg-1 auth-border-right">
+              <div class="bossify-auth-box">
+                <h2 class="bossify-auth-title">Sign In To Your Account</h2>
+                <p class="bossify-auth-subtitle">Welcome back!</p>
+                <p class="bossify-auth-text">
+                  If you already have an account with us, please sign in.
+                </p>
+
+                <form class="bossify-auth-form" action="#" method="post">
+                  <div class="bossify-field">
+                    <label class="bossify-label" for="bossifyEmail"
+                      >E-mail/Mobile *</label
+                    >
+                    <input
+                      id="bossifyEmail"
+                      type="text"
+                      class="bossify-input"
+                      placeholder="Enter your email or mobile"
+                      required
+                    />
+                  </div>
+
+                  <div class="bossify-field">
+                    <label class="bossify-label" for="bossifyPassword"
+                      >Password *</label
+                    >
+
+                    <div class="bossify-password">
+                      <input
+                        id="bossifyPassword"
+                        type="password"
+                        class="bossify-input bossify-input--password"
+                        placeholder="Enter your password"
+                        required
+                      />
+                      <button
+                        class="bossify-eye"
+                        type="button"
+                        id="bossifyTogglePassword"
+                        aria-label="Toggle password"
+                      >
+                        <i class="ph-thin ph-eye"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="bossify-auth-row">
+                    <label class="bossify-remember">
+                      <input type="checkbox" />
+                      <span>Remember Me</span>
+                    </label>
+
+                    <a class="bossify-link" href="#">Forgot password?</a>
+                  </div>
+
+                  <button
+                    class="bossify-btn bossify-btn-primary w-100"
+                    type="submit"
+                  >
+                    Sign In
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6 order-2 order-lg-2">
+              <div class="bossify-auth-box bossify-auth-box--right">
+                <h2 class="bossify-auth-title">
+                  DON’T HAVE A THAMBURATTI ACCOUNT?
+                </h2>
+                <p class="bossify-auth-text">
+                  Create an account to save favourites, track orders, and
+                  checkout faster.
+                </p>
+                <a class="bossify-btn bossify-btn-outline w-100" href="#">
+                  Register to Thamburatti
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="sb-footer">
+        <div class="sb-footer__overlay">
+          <div class="container">
+            <div class="row gy-4">
+              <!-- Categories -->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <h3 class="sb-footer__heading">Categories</h3>
+                <ul class="sb-footer__list">
+                  <li><a href="#" class="sb-footer__link">Bridal</a></li>
+                  <li><a href="#" class="sb-footer__link">Dress</a></li>
+                  <li><a href="#" class="sb-footer__link">Sarees</a></li>
+                  <li><a href="#" class="sb-footer__link">Lehenga Choli</a></li>
+                  <li>
+                    <a href="#" class="sb-footer__link">Summer Clothes</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Discover -->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <h3 class="sb-footer__heading">Discover</h3>
+                <ul class="sb-footer__list">
+                  <li><a href="#" class="sb-footer__link">Home</a></li>
+                  <li><a href="#" class="sb-footer__link">About Us</a></li>
+                  <li><a href="#" class="sb-footer__link">Shop</a></li>
+                  <li><a href="#" class="sb-footer__link">Consulting</a></li>
+                  <li><a href="#" class="sb-footer__link">Contact Us</a></li>
+                  <li><a href="#" class="sb-footer__link">Login</a></li>
+                </ul>
+              </div>
+
+              <!-- Policies -->
+              <div class="col-12 col-sm-6 col-lg-2">
+                <h3 class="sb-footer__heading">Policies</h3>
+                <ul class="sb-footer__list">
+                  <li>
+                    <a href="#" class="sb-footer__link">Terms of Services</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sb-footer__link">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sb-footer__link">Return &amp; Refund</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Customer service -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <h3 class="sb-footer__heading">Customer Service</h3>
+                <ul class="sb-footer__list sb-footer__list--icon">
+                  <li>
+                    <i class="ph ph-phone-call sb-footer__icon"></i>
+                    <a href="#" class="sb-footer__link">+91 98765 43210</a>
+                  </li>
+                  <li>
+                    <i class="ph ph-envelope sb-footer__icon"></i>
+                    <a href="#" class="sb-footer__link"
+                      >support@shreeboutique.com</a
+                    >
+                  </li>
+                  <li>
+                    <i class="ph ph-map-pin-line sb-footer__icon"></i>
+                    <span class="sb-footer__text">
+                      123, Ethnic Street, Fashion District,<br />
+                      Ahmedabad, Gujarat 380001
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row gy-4 mt-4 align-items-start">
+              <!-- Connect -->
+              <div class="col-12 col-lg-6">
+                <h3 class="sb-footer__heading">Connect With Us</h3>
+                <p class="sb-footer__text mb-2">
+                  Join our mailing list for updates.
+                </p>
+                <form class="sb-footer__form d-flex flex-wrap gap-2">
+                  <input
+                    type="email"
+                    class="form-control sb-footer__input"
+                    placeholder="Enter your email"
+                  />
+                  <button type="submit" class="btn sb-footer__btn">
+                    Subscribe
+                  </button>
+                </form>
+
+                <div class="sb-footer__social mt-3">
+                  <a href="#" class="sb-footer__social-link">
+                    <i class="ph ph-instagram-logo"></i>
+                  </a>
+                  <a href="#" class="sb-footer__social-link">
+                    <i class="ph ph-facebook-logo"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- bottom strip -->
+        <div class="sb-footer__strip">
+          <div class="container">
+            <p class="sb-footer__copy mb-0 text-center">
+              © 2025 Thamburaatti. Ltd. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- jQuery (required for Owl Carousel 2) -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owl-custom.js"></script>
+
+    <!-- Lenis JS -->
+    <script src="js/lenis.min.js"></script>
+
+    <!-- GSAP-based section animation -->
+    <script src="js/lenisInstallation.js"></script>
+  </body>
+</html>

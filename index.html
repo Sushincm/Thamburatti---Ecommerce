@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thamburaatti</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -36,8 +44,19 @@
         <div
           class="container sb-header__container d-flex align-items-center justify-content-between py-3"
         >
+          <!-- Hamburger Button (Mobile) -->
+          <button
+            class="btn sb-header-icon-btn d-lg-none me-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+          >
+            <i class="ph ph-list" style="font-size: 1.5rem"></i>
+          </button>
+
           <!-- Left: category nav -->
-          <nav class="sb-header__nav d-none d-md-block">
+          <nav class="sb-header__nav d-none d-lg-block">
             <ul
               class="sb-header-nav list-unstyled d-flex align-items-center gap-4 mb-0"
             >
@@ -83,7 +102,7 @@
           <div class="sb-header__actions d-flex align-items-center gap-3">
             <!-- Search pill -->
             <form
-              class="sb-search d-none d-md-flex align-items-center"
+              class="sb-search d-none d-lg-flex align-items-center"
               role="search"
             >
               <div class="sb-search__input-wrap flex-grow-1">
@@ -117,7 +136,7 @@
             </button>
           </div>
         </div>
-        <div class="sb-main-nav-wrapper">
+        <div class="sb-main-nav-wrapper d-none d-lg-block">
           <nav class="sb-main-nav d-flex justify-content-center">
             <ul
               class="sb-main-nav__list list-unstyled d-flex align-items-center gap-4 mb-0"
@@ -145,6 +164,79 @@
           </nav>
         </div>
       </header>
+
+      <!-- Mobile Menu Offcanvas -->
+      <div
+        class="offcanvas offcanvas-start sb-mobile-menu"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+      >
+        <div class="offcanvas-header border-bottom">
+          <h5
+            class="offcanvas-title sb-mobile-menu__title"
+            id="mobileMenuLabel"
+          >
+            Menu
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- Mobile Search -->
+          <form class="d-flex mb-4" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-dark" type="submit">
+              <i class="ph ph-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <!-- Main Navigation Links -->
+          <h6
+            class="text-uppercase text-muted mb-3"
+            style="font-size: 0.8rem; letter-spacing: 1px"
+          >
+            Navigation
+          </h6>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+            <li><a href="#home" class="sb-mobile-menu__link">Home</a></li>
+            <li><a href="#" class="sb-mobile-menu__link">About Us</a></li>
+            <li><a href="#" class="sb-mobile-menu__link">Shop All</a></li>
+            <li><a href="#" class="sb-mobile-menu__link">Consulting</a></li>
+            <li><a href="#" class="sb-mobile-menu__link">Contact Us</a></li>
+          </ul>
+
+          <hr class="my-4" />
+
+          <!-- Category Links -->
+          <h6
+            class="text-uppercase text-muted mb-3"
+            style="font-size: 0.8rem; letter-spacing: 1px"
+          >
+            Categories
+          </h6>
+          <ul class="list-unstyled d-flex flex-column gap-3">
+            <li><a href="#bridal" class="sb-mobile-menu__link">Bridal</a></li>
+            <li><a href="#dress" class="sb-mobile-menu__link">Dress</a></li>
+            <li><a href="#sarees" class="sb-mobile-menu__link">Sarees</a></li>
+            <li>
+              <a href="#summer" class="sb-mobile-menu__link">Summer Clothes</a>
+            </li>
+            <li>
+              <a href="#lehenga" class="sb-mobile-menu__link">Lehenga Choli</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <section class="sb-banner py-0">
         <div class="owl-carousel sb-banner-carousel">
@@ -218,9 +310,10 @@
               >
                 <div class="sb-topcat__card">
                   <img
-                    src="https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    src="https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Sarees"
                     class="sb-topcat__image"
+                    loading="lazy"
                   />
                 </div>
                 <p class="sb-topcat__label">Sarees</p>
@@ -308,14 +401,16 @@
                 <div class="sb-arrivals__card">
                   <div class="sb-arrivals__image-wrap">
                     <img
-                      src="https://images.pexels.com/photos/6311664/pexels-photo-6311664.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                      src="https://images.pexels.com/photos/6311664/pexels-photo-6311664.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="Red Rawsilk Crêpe"
                       class="sb-arrivals__image sb-arrivals__image--primary"
+                      loading="lazy"
                     />
                     <img
-                      src="https://images.pexels.com/photos/6311665/pexels-photo-6311665.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                      src="https://images.pexels.com/photos/6311665/pexels-photo-6311665.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="Red Rawsilk Crêpe alternate"
                       class="sb-arrivals__image sb-arrivals__image--hover"
+                      loading="lazy"
                     />
                   </div>
                   <div class="sb-arrivals__content">
@@ -337,14 +432,16 @@
                 <div class="sb-arrivals__card">
                   <div class="sb-arrivals__image-wrap">
                     <img
-                      src="https://images.pexels.com/photos/6311660/pexels-photo-6311660.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                      src="https://images.pexels.com/photos/6311660/pexels-photo-6311660.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="Pink Gadhwal Silk"
                       class="sb-arrivals__image sb-arrivals__image--primary"
+                      loading="lazy"
                     />
                     <img
-                      src="https://images.pexels.com/photos/6311661/pexels-photo-6311661.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                      src="https://images.pexels.com/photos/6311661/pexels-photo-6311661.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="Pink Gadhwal Silk alternate"
                       class="sb-arrivals__image sb-arrivals__image--hover"
+                      loading="lazy"
                     />
                   </div>
                   <div class="sb-arrivals__content">
@@ -452,9 +549,10 @@
               <div class="sb-elevate__visual">
                 <div class="sb-elevate__photo-wrap">
                   <img
-                    src="images/elavate-right.png"
+                    src="images/elavate-right.webp"
                     alt="Styled outfit"
                     class="sb-elevate__photo w-100"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -534,9 +632,10 @@
                 >
                   <div class="sb-consulting__image-wrap">
                     <img
-                      src="https://images.pexels.com/photos/6311664/pexels-photo-6311664.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                      src="https://images.pexels.com/photos/6311664/pexels-photo-6311664.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="Seasonal & Trend-Based Styling"
                       class="sb-consulting__image"
+                      loading="lazy"
                     />
                   </div>
                   <div class="sb-consulting__content">
@@ -554,9 +653,10 @@
                 >
                   <div class="sb-consulting__image-wrap">
                     <img
-                      src="https://images.pexels.com/photos/6311660/pexels-photo-6311660.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                      src="https://images.pexels.com/photos/6311660/pexels-photo-6311660.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="Luxury & Designer Wear Guidance"
                       class="sb-consulting__image"
+                      loading="lazy"
                     />
                   </div>
                   <div class="sb-consulting__content">
@@ -574,9 +674,10 @@
                 >
                   <div class="sb-consulting__image-wrap">
                     <img
-                      src="https://images.pexels.com/photos/6311662/pexels-photo-6311662.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                      src="https://images.pexels.com/photos/6311662/pexels-photo-6311662.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="Personalized Style Curation"
                       class="sb-consulting__image"
+                      loading="lazy"
                     />
                   </div>
                   <div class="sb-consulting__content">
@@ -594,9 +695,10 @@
                 >
                   <div class="sb-consulting__image-wrap">
                     <img
-                      src="https://images.pexels.com/photos/6311658/pexels-photo-6311658.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                      src="https://images.pexels.com/photos/6311658/pexels-photo-6311658.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="Bridal & Occasion Wear Consultation"
                       class="sb-consulting__image"
+                      loading="lazy"
                     />
                   </div>
                   <div class="sb-consulting__content">
@@ -665,9 +767,10 @@
 
                 <div class="sb-discover__image-wrap">
                   <img
-                    src="https://images.pexels.com/photos/6311664/pexels-photo-6311664.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    src="https://images.pexels.com/photos/6311664/pexels-photo-6311664.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Bridal post 1"
                     class="sb-discover__image"
+                    loading="lazy"
                   />
                 </div>
 
@@ -700,9 +803,10 @@
 
                 <div class="sb-discover__image-wrap">
                   <img
-                    src="https://images.pexels.com/photos/6311660/pexels-photo-6311660.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    src="https://images.pexels.com/photos/6311660/pexels-photo-6311660.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Bridal post 2"
                     class="sb-discover__image"
+                    loading="lazy"
                   />
                 </div>
 
@@ -735,9 +839,10 @@
 
                 <div class="sb-discover__image-wrap">
                   <img
-                    src="https://images.pexels.com/photos/6311662/pexels-photo-6311662.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    src="https://images.pexels.com/photos/6311662/pexels-photo-6311662.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Bridal post 3"
                     class="sb-discover__image"
+                    loading="lazy"
                   />
                 </div>
 
@@ -770,9 +875,10 @@
 
                 <div class="sb-discover__image-wrap">
                   <img
-                    src="https://images.pexels.com/photos/6311658/pexels-photo-6311658.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    src="https://images.pexels.com/photos/6311658/pexels-photo-6311658.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Timeless gown"
                     class="sb-discover__image"
+                    loading="lazy"
                   />
                 </div>
 
@@ -805,9 +911,10 @@
 
                 <div class="sb-discover__image-wrap">
                   <img
-                    src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Radiant elegance"
                     class="sb-discover__image"
+                    loading="lazy"
                   />
                 </div>
 
@@ -1067,8 +1174,5 @@
 
     <!-- GSAP-based section animation -->
     <script src="js/lenisInstallation.js"></script>
-
-    <!-- Other local scripts -->
-    <script src="js/owl-custom.js"></script>
   </body>
 </html>
